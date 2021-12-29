@@ -15,7 +15,7 @@ class NavbarComponent extends React.Component {
     }
     render() {
         return (
-            <Navbar expand="md" class="d-flex justify-content-between">
+            <Navbar expand="md" class="d-flex justify-content-between custnavbar">
                 <ModalAuthPage
                     modalOpen={this.state.modalAuthPage}
                     btClose={() => this.setState({ modalAuthPage: !this.state.modalAuthPage })}

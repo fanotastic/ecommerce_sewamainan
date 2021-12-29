@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.custnavbar {
+  background: rgb(243,243,245);
+  background: linear-gradient(90deg, rgba(243,243,245,1) 0%, rgba(245,244,249,1) 32%, rgba(253,254,255,1) 100%);
+}
