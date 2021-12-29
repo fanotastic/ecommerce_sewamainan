@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { connect } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import NavbarComponent from './components/Navbar';
+import HomePage from './pages/HomePage';
+import { loginAction } from './redux/actions'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {  }
+  }
+
+  componentDidMount() {
+    this.keepLogin()
+  }
+
+  keepLogin = async () => {
+    try {
+      let local = localStorage.getItem ("data")
+      if (local) {
+        local = JSON.parse(local)
+        let res = await this.props.loginAction(local.username, local.password)
+      } 
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  render() { 
+    return ( 
+      <>
+        <NavbarComponent/>
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          {/* <Route path="/product-page" element={<ProductsPage/>}/> */}
+        </Routes>
+      </>
+      );
+  }
 }
 
-export default App;
+const mapToProps = (state) => {
+  return {
+    role: state.userReducer.role
+  }
+}
+ 
+export default connect(mapToProps, {loginAction}) (App);
