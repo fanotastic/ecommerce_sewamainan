@@ -21,6 +21,28 @@ export const loginAction = (username, password) => {
     }
 }
 
+export const Register = (username, email, password) => {
+    return async (dispatch) => {
+        try {
+            let res = await axios.post((`${API_URL}/users`), {
+                username,
+                email,
+                password,
+                role: "user",
+                status: "Active",
+                cart: []
+            })
+            dispatch({
+                type: "REGISTER_SUCCESS",
+                payload: res.data
+            })
+            return { success: true }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+
 export const logOutAction = () => {
     return {
         type: "LOGOUT"

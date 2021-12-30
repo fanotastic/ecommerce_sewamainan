@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { ModalHeader, Modal, ModalBody, FormGroup, Label, Input, InputGroupText, InputGroup, Button } from 'reactstrap';
 import { loginAction } from '../redux/actions'
+import { Register } from '../redux/actions'
 
 
 class ModalAuthPage extends React.Component {
@@ -17,6 +18,12 @@ class ModalAuthPage extends React.Component {
 
     btLogin = () => {
         this.props.loginAction(this.usernameLogin.value, this.passwordLogin.value)
+        this.props.btClose()
+    }
+
+    btRegister = () => {
+        this.props.Register(this.usernameRegister.value, this.emailRegister.value, this.passwordRegister.value)
+        this.props.btClose()
     }
 
     btShowPassLogin = () => {
@@ -49,7 +56,8 @@ class ModalAuthPage extends React.Component {
 
     render() {
         return (
-            <Modal size='lg' isOpen={this.props.modalOpen} toggle={this.props.btClose}>
+            <Modal size='lg' isOpen={this.props.modalOpen} toggle={this.props.btClose} aria-labelledby="contained-modal-title-vcenter"
+                centered>
                 <div className='container-fluid d-flex justify-content-between px-5'>
                     <div className='py-4'>
                         <h3 className='mx-3 my-3 text-center'>Login</h3>
@@ -58,7 +66,7 @@ class ModalAuthPage extends React.Component {
                             <FormGroup style={{ marginTop: 21 }}>
                                 <Label>Username</Label>
                                 <Input size={200} type="text" id="textNama" placeholder="Your username"
-                                innerRef={(element) => this.usernameLogin = element} />
+                                    innerRef={(element) => this.usernameLogin = element} />
                             </FormGroup>
                             <FormGroup>
                                 <Label>Password</Label>
@@ -80,18 +88,18 @@ class ModalAuthPage extends React.Component {
                             <FormGroup>
                                 <Label>Username</Label>
                                 <Input size={200} type="text" id="textNamaReg" placeholder="Your username"
-                                innerRef={(element) => this.usernameRegister = element} />
+                                    innerRef={(element) => this.usernameRegister = element} />
                             </FormGroup>
                             <FormGroup>
                                 <Label>Email</Label>
                                 <Input type="text" id="textEmailReg" placeholder="Your email"
-                                innerRef={(element) => this.emailRegister = element} />
+                                    innerRef={(element) => this.emailRegister = element} />
                             </FormGroup>
                             <FormGroup>
                                 <Label>Password</Label>
                                 <InputGroup>
                                     <Input type={this.state.regPassType} id="textPasswordReg" placeholder="Your password"
-                                    innerRef={(element) => this.passwordRegister = element} />
+                                        innerRef={(element) => this.passwordRegister = element} />
                                     <InputGroupText style={{ cursor: "pointer" }} onClick={this.btShowPassRegister}>
                                         {this.state.regPassShow}
                                     </InputGroupText>
@@ -106,7 +114,7 @@ class ModalAuthPage extends React.Component {
                                     </InputGroupText>
                                 </InputGroup>
                             </FormGroup>
-                            <Button style={{ width: "100%", backgroundColor: "#e67e22" }} onClick={this.btLogin}>Register</Button>
+                            <Button style={{ width: "100%", backgroundColor: "#e67e22" }} onClick={this.btRegister}>Register</Button>
                         </ModalBody>
                     </div>
                 </div>
@@ -125,4 +133,4 @@ const mapToProps = (state) => {
     }
 }
 
-export default connect(mapToProps, { loginAction }) (ModalAuthPage);
+export default connect(mapToProps, { loginAction, Register })(ModalAuthPage);
