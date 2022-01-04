@@ -30,15 +30,14 @@ class History extends Component {
         return this.state.transaksi.map((value, index) => {
             let badgeColor = value.status.includes("Batal") ? "danger" : "warning"
             return <div className="shadow pb-3 rounded">
-                <div className="shadow-sm p-2 bg-dark rounded" style={{ color: "white" }}>
-                    <span>{value.date} <Badge color={badgeColor}>{value.status}</Badge> </span>
-                    <b style={{ marginLeft: 20 }}>{value.invoice}</b>
+                <div className="p-2">
+                    <span>{value.date}</span>
                 </div>
                 <div className="row p-3">
-                    <div className="col-md-1">
+                    <div className="col-md-2">
                         <img src={value.detail[0].image} width="100%" />
                     </div>
-                    <div className="col-md-8 d-flex flex-column justify-content-center" style={{ borderRight: "1px solid gray" }}>
+                    <div className="col-md-7 d-flex flex-column justify-content-center" style={{ borderRight: "1px solid gray" }}>
                         <h4 style={{ fontWeight: "bolder" }}>{value.detail[0].nama}</h4>
                         <p className="text-muted">{value.detail[0].qty} x Rp. {value.detail[0].harga.toLocaleString()}</p>  
                         {
@@ -60,6 +59,9 @@ class History extends Component {
                         Lihat Detail Produk
                     </Button>
                 </div>
+                <div className="rounded">
+                   <span><b style={{ marginLeft: 20 }}>{value.invoice}</b> <Badge color={badgeColor}>{value.status}</Badge></span> 
+                </div>
             </div>
         })
     }
@@ -67,7 +69,7 @@ class History extends Component {
     render() { 
         return ( 
             <div className='container'>
-               <h1>Histori Transaksi Anda</h1>
+               <h1 className='my-3' style={{color: "#EF4723"}}>Histori Transaksi Anda</h1>
                {this.printHistory()}
             </div>
          );

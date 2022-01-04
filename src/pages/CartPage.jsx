@@ -14,14 +14,20 @@ class CartPage extends Component {
 
     totalPayment = () => {
         let total = 0;
-        this.props.cart.forEach((value) => total += value.harga )
+        this.props.cart.forEach((value) => total += value.harga)
         return total
     }
 
     shipping = () => {
         let total = 0;
-        this.props.cart.forEach((value) => total += value.harga * 10 / 100 )
+        this.props.cart.forEach((value) => total += value.harga * 10 / 100)
         return total
+    }
+
+    onBtRemove = (index) => {
+        let temp = [...this.props.cart];
+        temp.splice(index, 1)
+        this.props.updateUserCart(temp, this.props.iduser);
     }
 
     onBtCheckOut = () => {
@@ -42,7 +48,7 @@ class CartPage extends Component {
         axios.post(`${API_URL}/userTransactions`, dataCheckOut)
             .then((res) => {
                 this.props.updateUserCart([], this.props.iduser)
-            }). catch((err)=> {
+            }).catch((err) => {
                 console.log(err)
             })
     }
@@ -51,11 +57,11 @@ class CartPage extends Component {
         return (
             <>
                 <div className='row container m-auto mt-3'>
-                    <div className='col-lg-7 p-3' style={{borderWidth: 2}}>
+                    <div className='col-lg-7 p-3' style={{ borderRight: "1px solid lightgray" }}>
                         <Table>
                             <thead>
                                 <tr>
-                                    <th colSpan={3}>Produk</th>
+                                    <th colSpan={3}>Produk</th>                                   
                                     <th>Harga</th>
                                     <th>Jumlah</th>
                                     <th>Subtotal</th>
@@ -64,34 +70,34 @@ class CartPage extends Component {
                             <tbody>
                                 {this.props.cart.map((value, index) => {
                                     return (
-                                        <tr className='align-items-center'>
-                                            <td>
-                                                <Cancel style={{ cursor: 'pointer' }} />
+                                        <tr>
+                                            <td className="text-center">
+                                                <Cancel style={{ cursor: 'pointer' }} onClick={() => this.onBtRemove(index)} />
                                             </td>
-                                            <td>
-                                                <img src={value.image} width="99vw" className='rounded-3' />
+                                            <td width="120vw">
+                                                <img src={value.image} width="100%" className='rounded-3 text-center' />
                                             </td>
-                                            <td>
+                                            <td style={{paddingRight: 50}}>
                                                 <p>{value.nama}</p>
+                                                <p>{value.masaSewa}</p>
                                             </td>
                                             <td>
-                                                Rp. {value.harga}
+                                                Rp. {value.harga.toLocaleString()}
                                             </td>
                                             <td>
                                                 {value.qty}
                                             </td>
                                             <td>
-                                                Rp. {value.harga}
+                                                Rp. {value.harga.toLocaleString()}
                                             </td>
-
                                         </tr>
                                     )
                                 })}
                             </tbody>
                         </Table>
                     </div>
-                    <div className='col-lg-5 px-3' style={{marginTop: 50, padding: 20}}>
-                        <p>Total Keranjang Belanja</p>
+                    <div className='col-lg-5 px-3' style={{ marginTop: 25}}>
+                        <p style={{borderBottom: "1px solid lightgray", paddingBottom: 10}}>Total Keranjang Belanja</p>
                         <Row xs='2'>
                             <Col>
                                 <p>Subtotal</p>
@@ -116,11 +122,12 @@ class CartPage extends Component {
                                 <p>Rp. {(this.shipping() + this.totalPayment()).toLocaleString()} </p>
                             </Col>
                         </Row>
-                        <Button type='button' color='primary' style={{width: "100%"}} onClick={this.onBtCheckOut}>LANJUTKAN KE CHECKOUT</Button>        
-                        <FormGroup className='my-3'>
-                            <Label for="note">Notes</Label>
+                        <FormGroup>
+                            <Label for="note">Notes :</Label>
                             <Input type="textarea" id="note" innerRef={elemen => this.note = elemen} />
                         </FormGroup>
+                        <Button type='button' color='primary' style={{ width: "100%" }} onClick={this.onBtCheckOut}>LANJUTKAN KE CHECKOUT</Button>
+                        
                     </div>
                 </div>
             </>
