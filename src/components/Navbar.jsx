@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavbarToggler, Collapse, NavItem, NavbarBrand, UncontrolledDropdown, DropdownToggle, Button, DropdownMenu, DropdownItem, Label } from 'reactstrap';
 import ModalAuthPage from './modalAuthPage';
 import { logOutAction } from '../redux/actions';
+import { Avatar } from '@material-ui/core';
+import LanguageIcon from "@material-ui/icons/Language";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
+
 
 class NavbarComponent extends React.Component {
     constructor(props) {
@@ -15,14 +20,14 @@ class NavbarComponent extends React.Component {
     }
     render() {
         return (
-            <Navbar expand="md" className="d-flex justify-content-between custnavbar shadow p-2">
+            <Navbar expand="md" className="custnavbar" style={{padding: 0, backgroundColor: 'transparent', width: "99vw"}}> 
                 <ModalAuthPage
                     modalOpen={this.state.modalAuthPage}
                     btClose={() => this.setState({ modalAuthPage: !this.state.modalAuthPage })}
                 />
                 <NavbarToggler onClick={() => this.setState({ openCollapse: !this.state.openCollapse })} />
                 <Collapse isOpen={this.state.openCollapse} navbar>
-                    <div className="container-fluid d-flex justify-content-between py-1">
+                    <div className="container-fluid d-flex justify-content-between align-items-center" style={{padding: 0, backgroundColor: 'transparent'}}>
                         <Nav>
                             <NavItem>
                                 <Link to="/" className="nav-link" style={{ color: "#d35400" }}>
@@ -40,9 +45,9 @@ class NavbarComponent extends React.Component {
                                 </Link>
                             </NavItem>
                         </Nav>
-                        <NavbarBrand>
+                        <NavbarBrand style={{marginRight: 100 }}>
                             <Link to="/">
-                                <img style={{marginRight: 90}} src="https://i.ibb.co/smMzRn6/logo-marita-rental.png" width="70px" />
+                                <img src="https://i.ibb.co/smMzRn6/logo-marita-rental.png" width="70px" />
                             </Link>
                         </NavbarBrand>
                         <Nav>
@@ -102,8 +107,11 @@ class NavbarComponent extends React.Component {
                                         }
                                     </UncontrolledDropdown>
                                     :
-                                    <div>
-                                        <Button color="success" type="button" outline onClick={() => this.setState({ modalAuthPage: !this.state.modalAuthPage })}>Masuk/Daftar</Button>
+                                    <div className="d-flex align-items-center">
+                                        <LanguageIcon/>
+                                        <ExpandMoreIcon/>
+                                        <Avatar style={{ cursor: 'pointer' }} onClick={() => this.setState({ modalAuthPage: !this.state.modalAuthPage })}/>
+                                        {/* <Button color="success" type="button" outline onClick={() => this.setState({ modalAuthPage: !this.state.modalAuthPage })}>Masuk/Daftar</Button> */}
                                     </div>
 
                             }

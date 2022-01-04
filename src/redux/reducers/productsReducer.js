@@ -2,7 +2,7 @@ const INITIAL_STATE = {
     productsList: []
 }
 
-export const productsReducer = (state = INITAL_STATE, action) => {
+export const productsReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case "GET_DATA_PRODUCTS":
             console.log("cek product", action.payload)

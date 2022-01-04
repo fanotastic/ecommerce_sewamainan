@@ -1,10 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Row, Col, InputGroup, Input, Card, CardImg, CardBody, CardTitle, Label, InputGroupText } from 'reactstrap';
+import { Row, Col, InputGroup, Input, Card, CardImg, CardBody, CardTitle, Label, InputGroupText, Button, ButtonGroup } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { API_URL } from '../helper';
 
 const ProductsPage = (props) => {
+
+    const [page, setPage] = useState(1)
 
     const [product, setProduct] = useState([])
 
@@ -21,10 +23,21 @@ const ProductsPage = (props) => {
         }
     }
 
+    const printBtPagination = () => {
+        let btn = []
+        for (let i = 0; i < Math.ceil(product.length / 8); i++) {
+            btn.push(<Button style={{backgroundColor: 'black'}}
+                disabled={page == i + 1 ? true : false}
+                onClick={() => setPage({ page: i + 1 })}>
+                {i + 1}
+            </Button>)
+        }
+        return btn;
+    }
 
     const printProducts = () => {
         console.log("dapet produk", product)
-        return product.map((value, index) => {
+        return product.slice(page > 1 ? (page - 1) * 8 : page - 1, page * 8).map((value, index) => {
             return (
                 <div className="col-md-3 mt-2 p-3">
                     <Card className="bg-white-rounded shadow">
@@ -37,7 +50,7 @@ const ProductsPage = (props) => {
                             />
                             <CardBody>
                                 <CardTitle tag="h5" style={{ fontWeight: "bolder" }}>{value.nama}</CardTitle>
-                                <CardTitle tag="h6" style={{ fontWeight: "bold" }}>Rp. {value.harga.toLocaleString()}</CardTitle>
+                                <CardTitle tag="h6" style={{ fontWeight: "bold" }}>Rp. {value.hargaSewa.toLocaleString()}/hari</CardTitle>
                             </CardBody>
                         </Link>
                     </Card>
@@ -47,13 +60,13 @@ const ProductsPage = (props) => {
     }
 
     return (
-        <div className='container-fluid' style={{width: "99vw"}}>
+        <div className='container-fluid' style={{ width: "99vw" }}>
             <div className="container align-items-center mt-4">
                 <Row>
                     <Col className='col-5 offset-1'>
                         <Label>Nama</Label>
                         <InputGroup style={{ width: "350px" }}>
-                            <Input 
+                            <Input
                                 type="text"
                                 id="textSearch"
                                 placeholder="Search" />
@@ -75,8 +88,13 @@ const ProductsPage = (props) => {
                     </Col>
                 </Row>
             </div>
-            <div className="row p-5" style={{width: "99vw"}}>
+            <div className="row p-5" style={{ width: "99vw" }}>
                 {printProducts()}
+            </div>
+            <div className="row p-5">
+                <ButtonGroup>
+                    {printBtPagination()}
+                </ButtonGroup>
             </div>
         </div>
     )

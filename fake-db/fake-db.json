@@ -32,19 +32,27 @@
     {
       "nama": "Baby Chair",
       "deskripsi": "Baby Chair/Kursi Makan Bayi, membantu para mommies yang babynya udh mulai MPASI nih. Tersedia beberapa mode, dari mulai mode kursi tinggi sampai pendek. Bisa dilipat jadi mudah untuk disimpan.",
-      "brand": "IKEA",
       "kategori": "High Chair",
-      "harga": 79000,
+      "hargaSewa": 5333,
+      "hargaProduk": 1300000,
       "stock": [
         {
           "id": null,
-          "type": "M",
-          "qty": 10
+          "masaSewa": "1 Bulan",
+          "harga": 200000,
+          "hargaPerHari": 6666
         },
         {
           "id": null,
-          "type": "L",
-          "qty": 12
+          "masaSewa": "2 Bulan",
+          "harga": 300000,
+          "hargaPerHari": 6000
+        },
+        {
+          "id": null,
+          "masaSewa": "3 Bulan",
+          "harga": 375000,
+          "hargaPerHari": 5333
         }
       ],
       "images": [
@@ -54,27 +62,32 @@
     },
     {
       "nama": "Baby Fence",
-      "brand": "Mr. DYI",
       "deskripsi": "Baby Fence dilengkapi dengan safety lock dan playboard, cocok untuk si kecil yang lagi belajar merangkak dan berjalan. Tersedia playmat juga loh moms untuk disewa bersamaan.",
       "kategori": "Baby Fence",
-      "harga": 1200000,
+      "hargaSewa": 7000,
+      "hargaProduk": 1800000,
       "stock": [
         {
           "id": null,
-          "type": "Black",
-          "qty": 5
+          "masaSewa": "1 Bulan",
+          "harga": 250000,
+          "hargaPerHari": 8333
         },
         {
           "id": null,
-          "type": "White",
-          "qty": 10
+          "masaSewa": "2 Bulan",
+          "harga": 460000,
+          "hargaPerHari": 7667
+        },
+        {
+          "id": null,
+          "masaSewa": "3 Bulan",
+          "harga": 630000,
+          "hargaPerHari": 7000
         }
       ],
       "images": [
-        "https://i.ibb.co/2kc16LS/Baby-Fence.png",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/594/0959497_PE806037_S4.jpg",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/727/0972709_PE811745_S4.jpg",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/557/0955706_PE803970_S4.jpg"
+        "https://i.ibb.co/2kc16LS/Baby-Fence.png"
       ],
       "id": 2
     },
@@ -83,17 +96,38 @@
       "deskripsi": "Stroller Cabin Size, praktis banget buat para mommies untuk bepergian. Dari mode duduk sampai tiduran pun bisa loh moms, dan mudah untuk dilipat juga jadi tidak makan tempat",
       "brand": "IKEA",
       "kategori": "Stroller",
-      "harga": 995000,
+      "hargaSewa": 14285,
+      "hargaProduk": 3700000,
       "stock": [
         {
           "id": null,
-          "type": "Black",
-          "qty": 12
+          "masaSewa": "1 Minggu",
+          "harga": 200000,
+          "hargaPerHari": 28571
         },
         {
           "id": null,
-          "type": "White",
-          "qty": 3
+          "masaSewa": "2 Minggu",
+          "harga": 300000,
+          "hargaPerHari": 21428
+        },
+        {
+          "id": null,
+          "masaSewa": "3 Minggu",
+          "harga": 375000,
+          "hargaPerHari": 17875
+        },
+        {
+          "id": null,
+          "masaSewa": "4 Minggu",
+          "harga": 450000,
+          "hargaPerHari": 16071
+        },
+        {
+          "id": null,
+          "masaSewa": "8 Minggu",
+          "harga": 800000,
+          "hargaPerHari": 14285
         }
       ],
       "images": [
@@ -106,17 +140,26 @@
       "deskripsi": "Baby Swing dilengkapi kelambu yang nyaman banget untuk si kecil, terdapat remote dan musik serta bisa beberapa mode ayunan.",
       "brand": "IKEA",
       "kategori": "Baby Swing",
-      "harga": 5499000,
+      "hargaSewa": 7333,
+      "hargaProduk": 1300000,
       "stock": [
         {
           "id": null,
-          "type": "White",
-          "qty": 5
+          "masaSewa": "1 Bulan",
+          "harga": 240000,
+          "hargaPerHari": 8000
         },
         {
           "id": null,
-          "type": "Black",
-          "qty": 10
+          "masaSewa": "2 Bulan",
+          "harga": 460000,
+          "hargaPerHari": 7666
+        },
+        {
+          "id": null,
+          "masaSewa": "3 Bulan",
+          "harga": 660000,
+          "hargaPerHari": 7333
         }
       ],
       "images": [
@@ -129,116 +172,156 @@
       "deskripsi": "Bouncer bayi dilengkapi kelambu yang nyaman banget untuk si kecil, terdapat musik dan bisa menggunakan powerbank.",
       "brand": "IKEA",
       "kategori": "Bouncer",
-      "harga": 2499000,
+      "hargaSewa": 15833,
+      "hargaProduk": 5300000,
       "stock": [
         {
           "id": null,
-          "type": "Black",
-          "qty": 12
+          "masaSewa": "1 Bulan",
+          "harga": 525000,
+          "hargaPerHari": 17500
         },
         {
           "id": null,
-          "type": "Brown",
-          "qty": 10
+          "masaSewa": "2 Bulan",
+          "harga": 1000000,
+          "hargaPerHari": 16666
+        },
+        {
+          "id": null,
+          "masaSewa": "3 Bulan",
+          "harga": 1425000,
+          "hargaPerHari": 15833
         }
       ],
       "images": [
-        "https://i.ibb.co/ySc2Tv9/Bouncer-Bayi.png",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/388/0938824_PE794380_S4.jpg",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/741/0974172_PE812299_S4.jpg"
+        "https://i.ibb.co/ySc2Tv9/Bouncer-Bayi.png"
       ],
       "id": 5
     },
     {
       "nama": "ELC Sand & Water Table",
       "deskripsi": "ELC Water Sand and Table yang seru banget untuk dimainkan bersama teman. Dilengkapi peralatannya loh.",
-      "brand": "IKEA",
-      "kategori": "Toys",
-      "harga": 599000,
+      "kategori": "Baby Activities",
+      "hargaSewa": 5000,
+      "hargaProduk": 1300000,
       "stock": [
         {
           "id": null,
-          "type": "R30",
-          "qty": 10
+          "masaSewa": "1 Bulan",
+          "harga": 250000,
+          "hargaPerHari": 5666
         },
         {
           "id": null,
-          "type": "R25",
-          "qty": 11
+          "masaSewa": "2 Bulan",
+          "harga": 460000,
+          "hargaPerHari": 5000
         }
       ],
       "images": [
-        "https://i.ibb.co/zFjzr0F/elc-sand-table.png",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/938/0893875_PE718921_S4.jpg",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/938/0893878_PE718922_S4.jpg"
+        "https://i.ibb.co/zFjzr0F/elc-sand-table.png"
       ],
       "id": 6
     },
     {
       "nama": "PMB Scooter Electric",
-      "deskripsi": "Electric scooter buat bermain dan belajar , bisa nemenin main keliling komplek loh!",
-      "brand": "IKEA",
+      "deskripsi": "Electric scooter buat bermain dan belajar, bisa nemenin main keliling komplek loh!",
       "kategori": "Toys",
-      "harga": 299000,
+      "hargaSewa": 8035,
+      "hargaProduk": 1000000,
       "stock": [
         {
           "id": null,
-          "type": "Type-1",
-          "qty": 12
+          "masaSewa": "1 Minggu",
+          "harga": 150000,
+          "hargaPerHari": 21428
         },
         {
           "id": null,
-          "type": "Type-2",
-          "qty": 13
+          "masaSewa": "2 Minggu",
+          "harga": 175000,
+          "hargaPerHari": 12500
+        },
+        {
+          "id": null,
+          "masaSewa": "3 Minggu",
+          "harga": 200000,
+          "hargaPerHari": 9523
+        },
+        {
+          "id": null,
+          "masaSewa": "4 Minggu",
+          "harga": 225000,
+          "hargaPerHari": 8035
         }
       ],
       "images": [
-        "https://i.ibb.co/KsrYQbd/Electric-Scooter.png",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/541/0954178_PE804201_S4.jpg",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/541/0954179_PE804202_S4.jpg"
+        "https://i.ibb.co/KsrYQbd/Electric-Scooter.png"
       ],
       "id": 7
     },
     {
       "nama": "Kolam Renang Besar",
       "deskripsi": " Kolam renang besar portable untuk berenang dirumah anda.",
-      "brand": "IKEA",
       "kategori": "Baby Activities",
-      "harga": 79000,
+      "hargaSewa": 10700,
+      "hargaProduk": 1000000,
       "stock": [
         {
           "id": null,
-          "type": "M",
-          "qty": 10
+          "masaSewa": "1 Minggu",
+          "harga": 150000,
+          "hargaPerHari": 21428
         },
         {
           "id": null,
-          "type": "L",
-          "qty": 12
+          "masaSewa": "2 Minggu",
+          "harga": 200000,
+          "hargaPerHari": 14285
+        },
+        {
+          "id": null,
+          "masaSewa": "3 Minggu",
+          "harga": 250000,
+          "hargaPerHari": 11904
+        },
+        {
+          "id": null,
+          "masaSewa": "4 Minggu",
+          "harga": 300000,
+          "hargaPerHari": 10714
         }
       ],
       "images": [
-        "https://i.ibb.co/qWVrZ83/Kolam-Besar.png",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/107/0810720_PE771385_S4.jpg"
+        "https://i.ibb.co/qWVrZ83/Kolam-Besar.png"
       ],
       "id": 8
     },
     {
       "nama": "Mobil Aki PMB",
-      "brand": "Mr. DYI",
       "deskripsi": "Mobil Aki PMB, seru banget buat dinaikin bisa pakai remote control juga!",
       "kategori": "Toys",
-      "harga": 1200000,
+      "hargaSewa": 10714,
+      "hargaProduk": 2000000,
       "stock": [
         {
           "id": null,
-          "type": "Black",
-          "qty": 5
+          "masaSewa": "2 Minggu",
+          "harga": 250000,
+          "hargaPerHari": 17857
         },
         {
           "id": null,
-          "type": "White",
-          "qty": 10
+          "masaSewa": "4 Minggu",
+          "harga": 350000,
+          "hargaPerHari": 12500
+        },
+        {
+          "id": null,
+          "masaSewa": "6 Minggu",
+          "harga": 450000,
+          "hargaPerHari": 10714
         }
       ],
       "images": [
@@ -249,19 +332,27 @@
     {
       "nama": "Nuna Box Bayi",
       "deskripsi": "Nuna Sena Box Bayi, praktis untuk para mommies dan tidak makan tempat karena bisa dilipat. Sudah include matras loh mom.",
-      "brand": "IKEA",
       "kategori": "Box Bayi",
-      "harga": 995000,
+      "hargaSewa": 7555,
+      "hargaProduk": 2000000,
       "stock": [
         {
           "id": null,
-          "type": "Black",
-          "qty": 12
+          "masaSewa": "1 Bulan",
+          "harga": 240000,
+          "hargaPerHari": 8000
         },
         {
           "id": null,
-          "type": "White",
-          "qty": 3
+          "masaSewa": "2 Bulan",
+          "harga": 460000,
+          "hargaPerHari": 7666
+        },
+        {
+          "id": null,
+          "masaSewa": "3 Bulan",
+          "harga": 680000,
+          "hargaPerHari": 7555
         }
       ],
       "images": [
@@ -272,19 +363,21 @@
     {
       "nama": "Perosotan Lipat Anak",
       "deskripsi": "Perosotan Lipat, mainan perosotan yang asik dan gak makan tempat.",
-      "brand": "IKEA",
       "kategori": "Baby Activites",
-      "harga": 5499000,
+      "hargaSewa": 8333,
+      "hargaProduk": 2000000,
       "stock": [
         {
           "id": null,
-          "type": "White",
-          "qty": 5
+          "masaSewa": "1 Bulan",
+          "harga": 275000,
+          "hargaPerHari": 9166
         },
         {
           "id": null,
-          "type": "Black",
-          "qty": 10
+          "masaSewa": "2 Bulan",
+          "harga": 500000,
+          "hargaPerHari": 8333
         }
       ],
       "images": [
@@ -295,44 +388,64 @@
     {
       "nama": "Baby Push Walker",
       "deskripsi": "Baby Push Walker membantu si kecil belajar berjalan dilengkapi mainan seru yang asyik buat dimainkan",
-      "brand": "IKEA",
       "kategori": "Toys",
-      "harga": 2499000,
+      "hargaSewa": 2666,
+      "hargaProduk": 500000,
       "stock": [
         {
           "id": null,
-          "type": "Black",
-          "qty": 12
+          "masaSewa": "1 Bulan",
+          "harga": 90000,
+          "hargaPerHari": 3000
         },
         {
           "id": null,
-          "type": "Brown",
-          "qty": 10
+          "masaSewa": "2 Bulan",
+          "harga": 160000,
+          "hargaPerHari": 2666
         }
       ],
       "images": [
-        "https://i.ibb.co/0DT6kGR/Ready-for-Rent-5.png",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/390/0939002_PE794384_S4.jpg",
-        "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/741/0974172_PE812299_S4.jpg"
+        "https://i.ibb.co/0DT6kGR/Ready-for-Rent-5.png"
       ],
       "id": 12
     },
     {
       "nama": "Rocking Horse",
       "deskripsi": "Rocking horse untuk bermain si kecil, aman ada seatbeltnya.",
-      "brand": "IKEA",
       "kategori": "Toys",
-      "harga": 599000,
+      "hargaSewa": 2857,
+      "hargaProduk": 700000,
       "stock": [
         {
           "id": null,
-          "type": "R30",
-          "qty": 10
+          "masaSewa": "1 Minggu",
+          "harga": 55000,
+          "hargaPerHari": 7857
         },
         {
           "id": null,
-          "type": "R25",
-          "qty": 11
+          "masaSewa": "2 Minggu",
+          "harga": 70000,
+          "hargaPerHari": 5000
+        },
+        {
+          "id": null,
+          "masaSewa": "3 Minggu",
+          "harga": 85000,
+          "hargaPerHari": 4047
+        },
+        {
+          "id": null,
+          "masaSewa": "4 Minggu",
+          "harga": 100000,
+          "hargaPerHari": 3571
+        },
+        {
+          "id": null,
+          "masaSewa": "8 Minggu",
+          "harga": 160000,
+          "hargaPerHari": 2857
         }
       ],
       "images": [
@@ -343,19 +456,33 @@
     {
       "nama": "Baby Swimming Equipment",
       "deskripsi": "Perlengkapan renang bayi nih ada rompi sama pelampung bayi untuk membantu si kecil belajar berenang.",
-      "brand": "IKEA",
       "kategori": "Baby Activities",
-      "harga": 299000,
+      "hargaSewa": 5357,
+      "hargaProduk": 500000,
       "stock": [
         {
           "id": null,
-          "type": "Type-1",
-          "qty": 12
+          "masaSewa": "1 Minggu",
+          "harga": 75000,
+          "hargaPerHari": 10714
         },
         {
           "id": null,
-          "type": "Type-2",
-          "qty": 13
+          "masaSewa": "2 Minggu",
+          "harga": 100000,
+          "hargaPerHari": 7142
+        },
+        {
+          "id": null,
+          "masaSewa": "3 Minggu",
+          "harga": 125000,
+          "hargaPerHari": 5952
+        },
+        {
+          "id": null,
+          "masaSewa": "4 Minggu",
+          "harga": 150000,
+          "hargaPerHari": 5357
         }
       ],
       "images": [
@@ -366,19 +493,21 @@
     {
       "nama": "Yaya Tayo 3 in 1 Slide",
       "deskripsi": "Yaya Tayo 3-in-1 slide, mainan perosotan tayo dan ayunan yang seru banget untuk dimainkan bersama.",
-      "brand": "IKEA",
       "kategori": "Baby Activities",
-      "harga": 299000,
+      "hargaSewa": 21666,
+      "hargaProduk": 7700000,
       "stock": [
         {
           "id": null,
-          "type": "Type-1",
-          "qty": 12
+          "masaSewa": "1 Bulan",
+          "harga": 775000,
+          "hargaPerHari": 25833
         },
         {
           "id": null,
-          "type": "Type-2",
-          "qty": 13
+          "masaSewa": "1 Bulan",
+          "harga": 1300000,
+          "hargaPerHari": 21666
         }
       ],
       "images": [
@@ -387,5 +516,41 @@
       "id": 15
     }
   ],
-  "userTransactions": []
+  "userTransactions": [
+    {
+      "iduser": 2,
+      "username": "fano",
+      "invoice": "#INV/1641279581246",
+      "date": "1/4/2022, 1:59:41 PM",
+      "totalPayment": 550000,
+      "shipping": 50000,
+      "note": "",
+      "detail": [
+        {
+          "image": [
+            "https://i.ibb.co/2kc16LS/Baby-Fence.png"
+          ],
+          "nama": "Baby Fence",
+          "hargaProduk": 1800000,
+          "hargaSewa": 7000,
+          "masaSewa": "1 Bulan",
+          "harga": 250000,
+          "qty": 1
+        },
+        {
+          "image": [
+            "https://i.ibb.co/2kc16LS/Baby-Fence.png"
+          ],
+          "nama": "Baby Fence",
+          "hargaProduk": 1800000,
+          "hargaSewa": 7000,
+          "masaSewa": "1 Bulan",
+          "harga": 250000,
+          "qty": 1
+        }
+      ],
+      "status": "Menunggu Konfirmasi",
+      "id": 1
+    }
+  ]
 }

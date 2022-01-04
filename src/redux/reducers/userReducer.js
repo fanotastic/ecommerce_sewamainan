@@ -17,6 +17,8 @@ export const userReducer = (state = INITIAL_STATE, action) => {
         case "REGISTER_SUCCESS":
             console.log("Register action payload", action.payload)
             return {...state, ...action.payload}
+        case "UPDATE_CART_USER":
+            return {...state, cart: action.payload}
         default:
             return state
     }

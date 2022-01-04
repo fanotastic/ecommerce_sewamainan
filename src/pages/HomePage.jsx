@@ -4,7 +4,7 @@ import banner from '../img/bannerlandingpage.png'
 
 const HomePage = (props) => {
     return (
-        <div className='container-fluid my-4' style={{backgroundColor:"#F3F3F5", paddingLeft: 418}}>
+        <div className='container-fluid' style={{backgroundColor:"#F3F3F5", paddingLeft: 418}}>
             <div className="bg-image p-5"
                 style={{
                     backgroundImage: `url(${banner})`,

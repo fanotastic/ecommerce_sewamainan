@@ -6,6 +6,11 @@ import { loginAction } from './redux/actions'
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import DetailProduct from './pages/DetailProduct';
+import CartPage from './pages/CartPage';
+import History from './pages/HistoryUser';
+import ProductManagement from './pages/ProductsManagement';
+import TransactionManagement from './pages/TransactionManagement';
+import NotFoundPage from './pages/NotFound';
 
 
 
@@ -39,6 +44,21 @@ class App extends React.Component {
           <Route path="/" element={<HomePage />} />
           <Route path="/product-page" element={<ProductsPage />} />
           <Route path="/product-detail" element={<DetailProduct />} />
+          {
+            this.props.role == "user" ?
+              <>
+                <Route path="/cart-user" element={<CartPage />} />
+                <Route path="/history-user" element={<History />} />
+              </>
+              :
+              this.props.role == "admin" ?
+                <>
+                  <Route path="/product-management" element={<ProductManagement />} />
+                  <Route path="/transaction-management" element={<TransactionManagement />} />
+                </>
+                :
+                <Route path="*" element={<NotFoundPage/>}/>
+          }
         </Routes>
       </>
     );
