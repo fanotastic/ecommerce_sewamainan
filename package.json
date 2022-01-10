@@ -2,7 +2,9 @@
   "name": "exercise_project",
   "version": "0.1.0",
   "private": true,
+  "homeapage": "https://fanotastic.github.io/ecommerce_sewamainan",
   "dependencies": {
+    "-": "0.0.1",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@material-ui/core": "^4.12.3",
@@ -14,6 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.24.0",
     "bootstrap": "^5.1.3",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-calendar": "^3.5.0",
     "react-datepicker": "^4.6.0",
@@ -25,10 +28,13 @@
     "reactstrap": "^9.0.1",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
+    "save-dev": "0.0.1-security",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
