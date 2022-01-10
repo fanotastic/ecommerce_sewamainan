@@ -11,6 +11,8 @@ import History from './pages/HistoryUser';
 import ProductManagement from './pages/ProductsManagement';
 import TransactionManagement from './pages/TransactionManagement';
 import NotFoundPage from './pages/NotFound';
+import FooterComponent from './components/Footer';
+import About from './pages/About';
 
 
 
@@ -44,6 +46,7 @@ class App extends React.Component {
           <Route path="/" element={<HomePage />} />
           <Route path="/product-page" element={<ProductsPage />} />
           <Route path="/product-detail" element={<DetailProduct />} />
+          <Route path="/about" element={<About/>}/>
           {
             this.props.role == "user" ?
               <>
@@ -60,6 +63,7 @@ class App extends React.Component {
                 <Route path="*" element={<NotFoundPage/>}/>
           }
         </Routes>
+        <FooterComponent />
       </>
     );
   }

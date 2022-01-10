@@ -26,6 +26,15 @@
       "status": "Active",
       "cart": [],
       "id": 3
+    },
+    {
+      "username": "utomo",
+      "email": "utomo@mail.com",
+      "password": "1234",
+      "role": "user",
+      "status": "Active",
+      "cart": [],
+      "id": 4
     }
   ],
   "products": [
@@ -39,18 +48,21 @@
         {
           "id": null,
           "masaSewa": "1 Bulan",
+          "period": 30,
           "harga": 200000,
           "hargaPerHari": 6666
         },
         {
           "id": null,
           "masaSewa": "2 Bulan",
+          "period": 60,
           "harga": 300000,
           "hargaPerHari": 6000
         },
         {
           "id": null,
           "masaSewa": "3 Bulan",
+          "period": 90,
           "harga": 375000,
           "hargaPerHari": 5333
         }
@@ -70,18 +82,21 @@
         {
           "id": null,
           "masaSewa": "1 Bulan",
+          "period": 30,
           "harga": 250000,
           "hargaPerHari": 8333
         },
         {
           "id": null,
           "masaSewa": "2 Bulan",
+          "period": 60,
           "harga": 460000,
           "hargaPerHari": 7667
         },
         {
           "id": null,
           "masaSewa": "3 Bulan",
+          "period": 90,
           "harga": 630000,
           "hargaPerHari": 7000
         }
@@ -102,30 +117,35 @@
         {
           "id": null,
           "masaSewa": "1 Minggu",
+          "period": 7,
           "harga": 200000,
           "hargaPerHari": 28571
         },
         {
           "id": null,
           "masaSewa": "2 Minggu",
+          "period": 14,
           "harga": 300000,
           "hargaPerHari": 21428
         },
         {
           "id": null,
           "masaSewa": "3 Minggu",
+          "period": 21,
           "harga": 375000,
           "hargaPerHari": 17875
         },
         {
           "id": null,
           "masaSewa": "4 Minggu",
+          "period": 28,
           "harga": 450000,
           "hargaPerHari": 16071
         },
         {
           "id": null,
           "masaSewa": "8 Minggu",
+          "period": 56,
           "harga": 800000,
           "hargaPerHari": 14285
         }
@@ -146,18 +166,21 @@
         {
           "id": null,
           "masaSewa": "1 Bulan",
+          "period": 30,
           "harga": 240000,
           "hargaPerHari": 8000
         },
         {
           "id": null,
           "masaSewa": "2 Bulan",
+          "period": 60,
           "harga": 460000,
           "hargaPerHari": 7666
         },
         {
           "id": null,
           "masaSewa": "3 Bulan",
+          "period": 90,
           "harga": 660000,
           "hargaPerHari": 7333
         }
@@ -178,18 +201,21 @@
         {
           "id": null,
           "masaSewa": "1 Bulan",
+          "period": 30,
           "harga": 525000,
           "hargaPerHari": 17500
         },
         {
           "id": null,
           "masaSewa": "2 Bulan",
+          "period": 60,
           "harga": 1000000,
           "hargaPerHari": 16666
         },
         {
           "id": null,
           "masaSewa": "3 Bulan",
+          "period": 90,
           "harga": 1425000,
           "hargaPerHari": 15833
         }
@@ -209,12 +235,14 @@
         {
           "id": null,
           "masaSewa": "1 Bulan",
+          "period": 30,
           "harga": 250000,
           "hargaPerHari": 5666
         },
         {
           "id": null,
           "masaSewa": "2 Bulan",
+          "period": 60,
           "harga": 460000,
           "hargaPerHari": 5000
         }
@@ -234,24 +262,28 @@
         {
           "id": null,
           "masaSewa": "1 Minggu",
+          "period": 7,
           "harga": 150000,
           "hargaPerHari": 21428
         },
         {
           "id": null,
           "masaSewa": "2 Minggu",
+          "period": 14,
           "harga": 175000,
           "hargaPerHari": 12500
         },
         {
           "id": null,
           "masaSewa": "3 Minggu",
+          "period": 21,
           "harga": 200000,
           "hargaPerHari": 9523
         },
         {
           "id": null,
           "masaSewa": "4 Minggu",
+          "period": 28,
           "harga": 225000,
           "hargaPerHari": 8035
         }
@@ -271,24 +303,28 @@
         {
           "id": null,
           "masaSewa": "1 Minggu",
+          "period": 7,
           "harga": 150000,
           "hargaPerHari": 21428
         },
         {
           "id": null,
           "masaSewa": "2 Minggu",
+          "period": 14,
           "harga": 200000,
           "hargaPerHari": 14285
         },
         {
           "id": null,
           "masaSewa": "3 Minggu",
+          "period": 21,
           "harga": 250000,
           "hargaPerHari": 11904
         },
         {
           "id": null,
           "masaSewa": "4 Minggu",
+          "period": 28,
           "harga": 300000,
           "hargaPerHari": 10714
         }
@@ -308,18 +344,21 @@
         {
           "id": null,
           "masaSewa": "2 Minggu",
+          "period": 14,
           "harga": 250000,
           "hargaPerHari": 17857
         },
         {
           "id": null,
           "masaSewa": "4 Minggu",
+          "period": 28,
           "harga": 350000,
           "hargaPerHari": 12500
         },
         {
           "id": null,
           "masaSewa": "6 Minggu",
+          "period": 42,
           "harga": 450000,
           "hargaPerHari": 10714
         }
@@ -339,18 +378,21 @@
         {
           "id": null,
           "masaSewa": "1 Bulan",
+          "period": 30,
           "harga": 240000,
           "hargaPerHari": 8000
         },
         {
           "id": null,
           "masaSewa": "2 Bulan",
+          "period": 60,
           "harga": 460000,
           "hargaPerHari": 7666
         },
         {
           "id": null,
           "masaSewa": "3 Bulan",
+          "period": 90,
           "harga": 680000,
           "hargaPerHari": 7555
         }
@@ -370,12 +412,14 @@
         {
           "id": null,
           "masaSewa": "1 Bulan",
+          "period": 30,
           "harga": 275000,
           "hargaPerHari": 9166
         },
         {
           "id": null,
           "masaSewa": "2 Bulan",
+          "period": 60,
           "harga": 500000,
           "hargaPerHari": 8333
         }
@@ -395,12 +439,14 @@
         {
           "id": null,
           "masaSewa": "1 Bulan",
+          "period": 30,
           "harga": 90000,
           "hargaPerHari": 3000
         },
         {
           "id": null,
           "masaSewa": "2 Bulan",
+          "period": 60,
           "harga": 160000,
           "hargaPerHari": 2666
         }
@@ -420,30 +466,35 @@
         {
           "id": null,
           "masaSewa": "1 Minggu",
+          "period": 7,
           "harga": 55000,
           "hargaPerHari": 7857
         },
         {
           "id": null,
           "masaSewa": "2 Minggu",
+          "period": 14,
           "harga": 70000,
           "hargaPerHari": 5000
         },
         {
           "id": null,
           "masaSewa": "3 Minggu",
+          "period": 21,
           "harga": 85000,
           "hargaPerHari": 4047
         },
         {
           "id": null,
           "masaSewa": "4 Minggu",
+          "period": 28,
           "harga": 100000,
           "hargaPerHari": 3571
         },
         {
           "id": null,
           "masaSewa": "8 Minggu",
+          "period": 56,
           "harga": 160000,
           "hargaPerHari": 2857
         }
@@ -463,24 +514,28 @@
         {
           "id": null,
           "masaSewa": "1 Minggu",
+          "period": 7,
           "harga": 75000,
           "hargaPerHari": 10714
         },
         {
           "id": null,
           "masaSewa": "2 Minggu",
+          "period": 14,
           "harga": 100000,
           "hargaPerHari": 7142
         },
         {
           "id": null,
           "masaSewa": "3 Minggu",
+          "period": 21,
           "harga": 125000,
           "hargaPerHari": 5952
         },
         {
           "id": null,
           "masaSewa": "4 Minggu",
+          "period": 28,
           "harga": 150000,
           "hargaPerHari": 5357
         }
@@ -500,12 +555,14 @@
         {
           "id": null,
           "masaSewa": "1 Bulan",
+          "period": 30,
           "harga": 775000,
           "hargaPerHari": 25833
         },
         {
           "id": null,
-          "masaSewa": "1 Bulan",
+          "masaSewa": "2 Bulan",
+          "period": 60,
           "harga": 1300000,
           "hargaPerHari": 21666
         }
@@ -520,11 +577,11 @@
     {
       "iduser": 2,
       "username": "fano",
-      "invoice": "#INV/1641279581246",
-      "date": "1/4/2022, 1:59:41 PM",
-      "totalPayment": 550000,
-      "shipping": 50000,
-      "note": "",
+      "invoice": "#INV/1641740807303",
+      "date": "1/9/2022, 10:06:47 PM",
+      "totalPayment": 506000,
+      "shipping": 46000,
+      "note": "kirim yang bersih ya",
       "detail": [
         {
           "image": [
@@ -533,10 +590,25 @@
           "nama": "Baby Fence",
           "hargaProduk": 1800000,
           "hargaSewa": 7000,
-          "masaSewa": "1 Bulan",
-          "harga": 250000,
+          "masaSewa": "2 Bulan",
+          "harga": 460000,
+          "startRent": "1/9/2022",
+          "endRent": "3/10/2022",
           "qty": 1
-        },
+        }
+      ],
+      "status": "Pesanan Batal",
+      "id": 1
+    },
+    {
+      "iduser": 2,
+      "username": "fano",
+      "invoice": "#INV/1641742169111",
+      "date": "1/9/2022, 10:29:29 PM",
+      "totalPayment": 693000,
+      "shipping": 63000,
+      "note": "kirim yang bagus",
+      "detail": [
         {
           "image": [
             "https://i.ibb.co/2kc16LS/Baby-Fence.png"
@@ -544,13 +616,145 @@
           "nama": "Baby Fence",
           "hargaProduk": 1800000,
           "hargaSewa": 7000,
-          "masaSewa": "1 Bulan",
-          "harga": 250000,
+          "masaSewa": "3 Bulan",
+          "harga": 630000,
+          "startRent": "1/9/2022",
+          "endRent": "4/9/2022",
           "qty": 1
         }
       ],
       "status": "Menunggu Konfirmasi",
-      "id": 1
+      "id": 2
+    },
+    {
+      "iduser": 2,
+      "username": "fano",
+      "invoice": "#INV/1641743938728",
+      "date": "1/9/2022, 10:58:58 PM",
+      "totalPayment": 1199000,
+      "shipping": 109000,
+      "note": "kirim yang terbaik",
+      "detail": [
+        {
+          "image": [
+            "https://i.ibb.co/2kc16LS/Baby-Fence.png"
+          ],
+          "nama": "Baby Fence",
+          "hargaProduk": 1800000,
+          "hargaSewa": 7000,
+          "masaSewa": "3 Bulan",
+          "harga": 630000,
+          "startRent": "1/9/2022",
+          "endRent": "4/9/2022",
+          "qty": 1
+        },
+        {
+          "image": [
+            "https://i.ibb.co/DLmC6v9/Baby-Swing-Rental.png"
+          ],
+          "nama": "Baby Swing",
+          "hargaProduk": 1300000,
+          "hargaSewa": 7333,
+          "masaSewa": "2 Bulan",
+          "harga": 460000,
+          "startRent": "1/9/2022",
+          "endRent": "3/10/2022",
+          "qty": 1
+        }
+      ],
+      "status": "Pesanan Batal",
+      "id": 3
+    },
+    {
+      "iduser": 2,
+      "username": "fano",
+      "invoice": "#INV/1641743980357",
+      "date": "1/9/2022, 10:59:40 PM",
+      "totalPayment": 918500,
+      "shipping": 83500,
+      "note": "kirim yang bersih",
+      "detail": [
+        {
+          "image": [
+            "https://i.ibb.co/2kc16LS/Baby-Fence.png"
+          ],
+          "nama": "Baby Fence",
+          "hargaProduk": 1800000,
+          "hargaSewa": 7000,
+          "masaSewa": "2 Bulan",
+          "harga": 460000,
+          "startRent": "1/9/2022",
+          "endRent": "3/10/2022",
+          "qty": 1
+        },
+        {
+          "image": [
+            "https://i.ibb.co/tbgcVsP/Baby-Chair.png"
+          ],
+          "nama": "Baby Chair",
+          "hargaProduk": 1300000,
+          "hargaSewa": 5333,
+          "masaSewa": "3 Bulan",
+          "harga": 375000,
+          "startRent": "1/9/2022",
+          "endRent": "4/9/2022",
+          "qty": 1
+        }
+      ],
+      "status": "Menunggu Konfirmasi",
+      "id": 4
+    },
+    {
+      "iduser": 2,
+      "username": "fano",
+      "invoice": "#INV/1641745009981",
+      "date": "1/9/2022, 11:16:49 PM",
+      "totalPayment": 2007500,
+      "shipping": 182500,
+      "note": "kirim dengan bersih",
+      "detail": [
+        {
+          "image": [
+            "https://i.ibb.co/qWVrZ83/Kolam-Besar.png"
+          ],
+          "nama": "Kolam Renang Besar",
+          "hargaProduk": 1000000,
+          "hargaSewa": 10700,
+          "masaSewa": "2 Minggu",
+          "harga": 200000,
+          "startRent": "1/9/2022",
+          "endRent": "1/23/2022",
+          "qty": 1
+        },
+        {
+          "image": [
+            "https://i.ibb.co/tbgcVsP/Baby-Chair.png"
+          ],
+          "nama": "Baby Chair",
+          "hargaProduk": 1300000,
+          "hargaSewa": 5333,
+          "masaSewa": "1 Bulan",
+          "harga": 200000,
+          "startRent": "1/9/2022",
+          "endRent": "2/8/2022",
+          "qty": 1
+        },
+        {
+          "image": [
+            "https://i.ibb.co/ySc2Tv9/Bouncer-Bayi.png"
+          ],
+          "nama": "Baby Bouncer",
+          "hargaProduk": 5300000,
+          "hargaSewa": 15833,
+          "masaSewa": "3 Bulan",
+          "harga": 1425000,
+          "startRent": "1/9/2022",
+          "endRent": "4/9/2022",
+          "qty": 1
+        }
+      ],
+      "status": "Menunggu Konfirmasi",
+      "id": 5
     }
   ]
 }

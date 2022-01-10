@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-import { Col, Input, Row, Table, Button, ToastHeader, Toast, ToastBody } from 'reactstrap';
+import { Col, Input, Row, Table, Button, ToastHeader, Toast, ToastBody, Alert } from 'reactstrap';
 import { API_URL } from '../helper';
 import Calendar from 'react-calendar'
 import { connect } from 'react-redux';
@@ -17,7 +17,10 @@ class DetailProduct extends React.Component {
             qty: 0,
             redirect: false,
             toastOpen: false,
-            toastMsg: ""
+            toastMsg: "",
+            selectedDate: "",
+            date: new Date(),
+            openAlert: false
         }
     }
 
@@ -42,6 +45,8 @@ class DetailProduct extends React.Component {
                 hargaSewa: detail.hargaSewa,
                 masaSewa: selectedPeriod.masaSewa,
                 harga: selectedPeriod.harga,
+                startRent: new Date(Date.now()).toLocaleDateString(),
+                endRent: new Date(Date.now() + (3600 * 1000 * (24 * selectedPeriod.period ))).toLocaleDateString(),
                 qty
             }
 
@@ -50,9 +55,8 @@ class DetailProduct extends React.Component {
 
             if (this.props.iduser) {
                 let res = await this.props.updateUserCart(temp, this.props.iduser);
-                if (res.success) {
-                    this.setState({ redirect: true })
-                }
+                this.setState({ 
+                    redirect: true})
             } else {
                 this.setState({
                     toastOpen: !this.state.toastOpen,
@@ -66,6 +70,8 @@ class DetailProduct extends React.Component {
             })
         }
     }
+
+    onChange = date => this.setState({ date })
 
     render() {
         if (this.state.redirect) {
@@ -132,8 +138,10 @@ class DetailProduct extends React.Component {
                                     <p>Lama Sewa:
                                         {
                                             this.state.qty ?
-                                                <p>{this.state.selectedPeriod.masaSewa} dengan harga sewa Rp. {this.state.selectedPeriod.harga}</p>
-                                                : 
+                                                <div>
+                                                    <p>{this.state.selectedPeriod.masaSewa} dengan harga sewa Rp. {this.state.selectedPeriod.harga.toLocaleString()}</p>  
+                                                </div>
+                                                :
                                                 <p> </p>
                                         }
                                     </p>
