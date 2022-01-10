@@ -2,7 +2,7 @@
   "name": "exercise_project",
   "version": "0.1.0",
   "private": true,
-  "homeapage": "https://fanotastic.github.io/ecommerce_sewamainan",
+  "homeapage": "http://fanotastic.github.io/ecommerce_sewamainan",
   "dependencies": {
     "-": "0.0.1",
     "@emotion/react": "^11.7.1",
