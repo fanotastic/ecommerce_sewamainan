@@ -28,8 +28,8 @@ class DetailProduct extends React.Component {
         console.log("CEK URL DETAIL", window.location)
         axios.get(`${API_URL}/products${window.location.search}`)
             .then((response) => {
-                console.log("cek data", response.data)
-                this.setState({ detail: response.data[0] })
+                console.log("cek data", response.data.dataProducts[0])
+                this.setState({ detail: response.data.dataProducts[0]})
             }).catch((err) => {
                 console.log(err)
             })
@@ -91,22 +91,22 @@ class DetailProduct extends React.Component {
                     </Toast>
                 </>
                 {
-                    this.state.detail.id &&
+                    this.state.detail.idproduct &&
                     <>
-                        <div className="text-center text-white py-3 container-fluid" style={{ backgroundColor: "#d35400" }}>
-                            <h1>{this.state.detail.nama}</h1>
-                            <p>{this.state.detail.kategori}</p>
+                        <div className="text-center text-white container-fluid my-3" style={{ backgroundColor: "#d35400", paddingTop: "30px", paddingBottom: "30px" }}>
+                            <h1>{this.state.detail.name}</h1>
+                            <p>{this.state.detail.category}</p>
                         </div>
                         <div className="container row m-auto mt-4 shadow rounded align-items-center">
                             <div className='col-md-6'>
-                                <img className="shadow-sm bg-white rounded m-4" src={this.state.detail.images} width="80%" />
+                                <img className="shadow-sm bg-white rounded m-4" src={this.state.detail.images[0].url} width="80%" />
                             </div>
                             <div className='col-md-6 my-3'>
                                 <div>
-                                    <h3 style={{ fontWeight: 'bolder' }}>Rp. {this.state.detail.hargaSewa.toLocaleString()}/hari</h3>
-                                    <p>Harga Beli Item ini adalah Rp. {this.state.detail.hargaProduk.toLocaleString()}</p>
+                                    <h3 style={{ fontWeight: 'bolder' }}>Rp. {this.state.detail.price_rental.toLocaleString()}/hari</h3>
+                                    <p>Harga Beli Item ini adalah Rp. {this.state.detail.price_product.toLocaleString()}</p>
                                     <p>Nikmati kenyamanan produk ini dengan Harga Sewa: </p>
-                                    <Table hover
+                                    <Table className='text-center' hover bordered style={{borderRadius: 20}}
                                     >
                                         <thead>
                                             <tr>
@@ -120,14 +120,14 @@ class DetailProduct extends React.Component {
                                         </thead>
                                         <tbody>
                                             {
-                                                this.state.detail.stock.map((item, index) => {
+                                                this.state.detail.stocks.map((item, index) => {
                                                     return (
                                                         <tr style={{ cursor: 'pointer' }} onClick={() => this.setState({ selectedPeriod: item, qty: 1 })}>
                                                             <td>
-                                                                {item.masaSewa}
+                                                                {item.rental_period}
                                                             </td>
                                                             <td>
-                                                                Rp. {item.harga.toLocaleString()} <p className='text-muted'>(Rp. {item.hargaPerHari.toLocaleString()}/hari)</p>
+                                                                Rp. {item.price.toLocaleString()} <p className='text-muted'>(Rp. {item.price_per_day.toLocaleString()}/hari)</p>
                                                             </td>
                                                         </tr>
                                                     )
@@ -139,7 +139,7 @@ class DetailProduct extends React.Component {
                                         {
                                             this.state.qty ?
                                                 <div>
-                                                    <p>{this.state.selectedPeriod.masaSewa} dengan harga sewa Rp. {this.state.selectedPeriod.harga.toLocaleString()}</p>  
+                                                    <p>{this.state.selectedPeriod.period} dengan harga sewa Rp. {this.state.selectedPeriod.price.toLocaleString()}</p>  
                                                 </div>
                                                 :
                                                 <p> </p>

@@ -14,18 +14,31 @@ class FooterComponent extends Component {
     }
     render() {
         return (
-            <div className='container-fluid py-3' style={{ backgroundColor: '#ecf0f1', borderTop: "1px solid", borderColor: "#7f8c8d", marginTop: 20 }}>
-                <div className="container d-flex align-items-center">
-                        <img src='https://i.ibb.co/smMzRn6/logo-marita-rental.png' width="5%" style={{marginRight: '5px'}}/>                    
-                    <div className='col-md-3'>
-                        <p style={{marginBottom: 0, fontSize: 10}}><CopyrightIcon sx={{ fontSize: 13}} /> 2021. MARITA STORE </p>
-                    </div>
-                    <div className="col-md-3">
-                        <p style={{marginBottom: 0, textAlign: 'right'}}><EmailIcon /> maritastore@gmail.com</p>
-                    </div>
-                    <div className="col-md-3 d-flex" style={{marginLeft: "auto"}}>
-                                <InstagramIcon />
-                                <WhatsAppIcon />
+            <div style={{ backgroundColor: '#ECF0F1' }}>
+                <div className='container py-3' style={{ backgroundColor: '#ECF0F1', borderTop: "1px solid #ECF0F1", borderColor: "#ECF0F1", marginTop: 20, color: 'darkgrey' }}>
+                    <div className="row align-items-center">
+                        <div className='col-md-4 d-flex align-items-center text-center'>
+                            <img src='https://i.ibb.co/smMzRn6/logo-marita-rental.png' width="15%" />
+                            <p style={{ fontSize: 10, fontSize: 12, marginLeft: 10, marginBottom: 0 }}><CopyrightIcon sx={{ fontSize: 13 }} /> 2021. Marita Rental </p>
+                        </div>
+                        <div className="col-md-4 text-md-center my-md-3">
+                            <p style={{ marginBottom: 0, fontSize: 13 }}>Syarat & Ketentuan</p>
+                            <p style={{ marginBottom: 0, fontSize: 13 }}>Kebijakan Privasi</p>
+                        </div>
+                        <div className="col-md-3 offset-md-1">
+                            <div className='d-flex'>
+                                <EmailIcon sx={{ fontSize: 20 }} className='mx-2' />
+                                <p style={{ fontSize: 13, margin: 0 }}>  maritarental@gmail.com</p>
+                            </div>
+                            <div className='d-flex'>
+                                <InstagramIcon sx={{ fontSize: 20 }} className='mx-2' />
+                                <p style={{ fontSize: 13, margin: 0 }}>  maritarental</p>
+                            </div>
+                            <div className='d-flex'>
+                                <WhatsAppIcon sx={{ fontSize: 20 }} className='mx-2' />
+                                <p style={{ fontSize: 13, margin: 0 }}>  maritarental</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

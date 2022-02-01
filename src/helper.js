@@ -1,3 +1,3 @@
-// export const API_URL = "http://localhost:2000"
+export const API_URL = "http://localhost:2600"
 
-export const API_URL = "https://jserver-maritarental.herokuapp.com"
+// export const API_URL = "https://jserver-maritarental.herokuapp.com"

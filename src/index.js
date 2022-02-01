@@ -9,6 +9,10 @@ import { rootReducers } from './redux/reducers';
 import { applyMiddleware, createStore } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import { Provider } from 'react-redux';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import "~slick-carousel/slick/slick.css"; 
+// import "~slick-carousel/slick/slick-theme.css";
 
 const globalStore = createStore(rootReducers, {}, applyMiddleware(ReduxThunk))
 

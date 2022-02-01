@@ -7,6 +7,15 @@
   pointer-events: none;
 }
 
+.zoom {
+  transition: transform .3s;
+  margin: 0 auto
+}
+
+.zoom:hover {
+  transform: scale(1.1)
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -28,6 +37,82 @@
   color: #61dafb;
 }
 
+.homepageh1 {
+  font-weight: bolder;
+    font-size: 40px;
+    color: #EF4723;
+    text-shadow: revert;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-left: 100px;
+}
+
+.homepageh2 {
+  font-weight: bolder;
+    font-size: 14px;
+    color: "grey";
+    margin-bottom: 100;
+    margin-left: 100px;
+    
+}
+
+.NavbarButton {
+  font-weight: 600;
+  color: #EF4723;
+  outline-color:#EF4723;
+  border: 1.5px solid #EF4723;
+  padding: 5px 15px;
+  border-radius: 50px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  cursor: pointer;
+
+}
+
+.fade-in {
+  animation: fadeIn 4s;
+}
+
+.NavbarButton:hover {
+  /* background-color: #EF4723;
+  color: white */
+  animation-name: navbarbutton;
+  animation-duration: 2s;
+}
+
+.NavbarHeader{
+  padding: 5px 10px;
+  margin-bottom: 0px;
+  
+}
+
+.NavbarHeader:hover {
+  animation-name: navbarheader;
+  animation-duration: 2s;
+}
+
+@keyframes navbarheader {
+  0% {border-bottom: 1px solid white}
+  25% {border-bottom: 1px solid #EF4723;}
+  100% {border-bottom: 1px solid #EF4723;}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navbarbutton {
+  0% {background-color: white;}
+  25% {background-color: #EF4723;color: white}
+  100% {background-color: #EF4723;color: white}
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,6 +120,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.example-auth {
+  font-size: x-small
 }
 
 @import url("https://cdn.syncfusion.com/ej2/material.css")

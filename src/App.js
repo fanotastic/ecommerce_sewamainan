@@ -2,8 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import NavbarComponent from './components/Navbar';
-import { loginAction } from './redux/actions'
+import { loginAction, keepAction, getProductsAction } from './redux/actions'
 import HomePage from './pages/HomePage';
+import Register from './pages/Register';
 import ProductsPage from './pages/ProductsPage';
 import DetailProduct from './pages/DetailProduct';
 import CartPage from './pages/CartPage';
@@ -12,7 +13,9 @@ import ProductManagement from './pages/ProductsManagement';
 import TransactionManagement from './pages/TransactionManagement';
 import NotFoundPage from './pages/NotFound';
 import FooterComponent from './components/Footer';
+import VerificationPage from './pages/VerificationPage';
 import About from './pages/About';
+import './App.css'
 
 
 
@@ -24,6 +27,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.keepLogin()
+    this.props.getProductsAction()
   }
 
   keepLogin = async () => {
@@ -38,6 +42,14 @@ class App extends React.Component {
     }
   }
 
+  keepLogin = async () => {
+    try {
+      let res = await this.props.keepAction()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   render() {
     return (
       <>
@@ -46,7 +58,9 @@ class App extends React.Component {
           <Route path="/" element={<HomePage />} />
           <Route path="/product-page" element={<ProductsPage />} />
           <Route path="/product-detail" element={<DetailProduct />} />
-          <Route path="/about" element={<About/>}/>
+          <Route path="/about" element={<About />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/verification/:token" element={<VerificationPage />} />
           {
             this.props.role == "user" ?
               <>
@@ -60,7 +74,7 @@ class App extends React.Component {
                   <Route path="/transaction-management" element={<TransactionManagement />} />
                 </>
                 :
-                <Route path="*" element={<NotFoundPage/>}/>
+                <Route path="*" element={<NotFoundPage />} />
           }
         </Routes>
         <FooterComponent />
@@ -75,4 +89,4 @@ const mapToProps = (state) => {
   }
 }
 
-export default connect(mapToProps, { loginAction })(App);
+export default connect(mapToProps, { loginAction, keepAction, getProductsAction })(App);

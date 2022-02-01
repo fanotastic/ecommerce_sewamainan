@@ -157,7 +157,7 @@ class CartPage extends Component {
                             </div>
                         </div>
                         :
-                        <div style={{ height: "100vh" }}>
+                        <div style={{ height: "76vh" }}>
                             <div className='text-center my-3' >
                                 <h1 className='my-3'>Keranjang Kosong</h1>
                                 <p>Maaf, sepertinya keranjang kamu masih kosong</p>

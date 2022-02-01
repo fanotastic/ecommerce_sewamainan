@@ -21,40 +21,44 @@ class NavbarComponent extends React.Component {
     }
     render() {
         return (
-            <Navbar expand="md" className='d-flex justify-content-space-between'>
+            <Navbar expand="md" className='container'>
                 <ModalAuthPage
                     modalOpen={this.state.modalAuthPage}
                     btClose={() => this.setState({ modalAuthPage: !this.state.modalAuthPage })}
                 />
+                <NavbarBrand>
+                    <Link to="/">
+                        <img src="https://i.ibb.co/smMzRn6/logo-marita-rental.png" width="70px" />
+                    </Link>
+                </NavbarBrand>
                 <NavbarToggler onClick={() => this.setState({ openCollapse: !this.state.openCollapse })} />
                 <Collapse isOpen={this.state.openCollapse} navbar>
                     {/* <div className="container-fluid d-flex justify-content-between align-items-center" style={{padding: 0, margin: 0 , backgroundColor: 'white'}}> */}
                     <Nav>
                         <NavItem>
-                            <Link to="/" className="nav-link" style={{ color: "#d35400" }}>
-                                Home
+                            <Link to="/" className="nav-link px-2" style={{ color: "#d35400", fontWeight: 'bold' }}>
+                                <p className='NavbarHeader'>Beranda</p>
                             </Link>
                         </NavItem>
                         <NavItem>
-                            <Link to="/product-page" className="nav-link" style={{ color: "#d35400" }}>
-                                Products
+                            <Link to="/product-page" className="nav-link px-2" style={{ color: "#d35400", fontWeight: 'bold' }}>
+                                <p className='NavbarHeader'>Produk</p>
                             </Link>
                         </NavItem>
                         <NavItem>
-                            <Link to="/about" className="nav-link" style={{ color: "#d35400" }}>
-                                About
+                            <Link to="/about" className="nav-link px-2" style={{ color: "#d35400", fontWeight: 'bold' }}>
+                                <p className='NavbarHeader'>Artikel</p>
+                            </Link>
+                        </NavItem>
+                        <NavItem>
+                            <Link to="/about" className="nav-link px-2" style={{ color: "#d35400", fontWeight: 'bold' }}>
+                                <p className='NavbarHeader'>Tentang Kami</p>
                             </Link>
                         </NavItem>
                     </Nav>
-                    <NavbarBrand style={{ margin: "auto" }}>
-                        <Link to="/">
-                            <img src="https://i.ibb.co/smMzRn6/logo-marita-rental.png" width="70px" />
-                        </Link>
-                    </NavbarBrand>
-                    {/* <Nav> */}
                     {
                         this.props.username ?
-                            <UncontrolledDropdown className='d-flex align-items-center' style={{ marginLeft: 70 }}>
+                            <UncontrolledDropdown className='d-flex align-items-center' style={{ marginLeft: "auto" }}>
                                 <DropdownToggle caret nav size="sm" outline style={{ color: "#d35400", paddingBottom: 0 }}>
                                     <Label style={{ color: "#d35400" }}>Hello, <b style={{ fontWeight: "bold" }}>   {this.props.username}</b></Label>
                                 </DropdownToggle>
@@ -118,15 +122,16 @@ class NavbarComponent extends React.Component {
                                 }
                             </UncontrolledDropdown>
                             :
-                            <div className="d-flex align-items-center" style={{ marginRight: 20 }}>
-                                <LanguageIcon />
-                                <ExpandMoreIcon />
-                                <Avatar style={{ cursor: 'pointer' }} onClick={() => this.setState({ modalAuthPage: !this.state.modalAuthPage })} />
-                                {/* <Button color="success" type="button" outline onClick={() => this.setState({ modalAuthPage: !this.state.modalAuthPage })}>Masuk/Daftar</Button> */}
+                            <div className='d-flex' style={{ marginLeft: 'auto' }}>
+                                <p className="NavbarButton" onClick={() => this.setState({ modalAuthPage: !this.state.modalAuthPage })}>Masuk</p>
+                                <Link to="/register" style={{textDecoration: 'none'}}>
+                                    <p className="NavbarButton">Daftar</p>
+                                </Link>
                             </div>
 
+                        // <div style={{ marginLeft: "auto" }}>
+                        // </div>
                     }
-                    {/* </Nav> */}
                     {/* </div> */}
                 </Collapse>
             </Navbar >
